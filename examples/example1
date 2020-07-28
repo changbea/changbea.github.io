@@ -1,0 +1,19 @@
+li = []
+for i in range(9):
+    li.append(int(input()))
+over = sum(li)-100
+for i in range(len(li)):
+    if len(li) == 7:
+        break
+    for j in range(len(li)):
+        if i == j:
+            continue
+        if i != j and li[i]+li[j] == over:
+            m = li[i]
+            n = li[j]
+            li.remove(m)
+            li.remove(n)
+            break
+li.sort()
+for i in li:
+    print(i)
