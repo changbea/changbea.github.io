@@ -1,0 +1,15 @@
+def _4828():
+    t = int(input())
+    for j in range(t):
+        n = int(input())
+        li = list(map(int, input().split()))
+        for i in range(n):
+            if i == 0:
+                max = li[i]
+                min = li[i]
+            if li[i] > max:
+                max = li[i]
+            if li[i] < min:
+                min = li[i]
+        print("#"+str(j+1)+" "+str(max-min))
+_4828()
