@@ -1,0 +1,14 @@
+num = []
+for i in range(12):
+    num.append(i+1)
+t = int(input())
+for i in range(t):
+    n,k = map(int, input().split())
+    min = sum(num[0:n])
+    max = sum(num[11-(n-1):12])
+    if k < min or k > max:
+        print("#"+str(i+1)+" 0")
+    elif k-min <= max-k:
+        print("#"+str(i+1)+" "+str(k-min+1))
+    elif max-k < k-min:
+        print("#"+str(i+1)+" "+str(max-k+1))
